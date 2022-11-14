@@ -1,0 +1,22 @@
+<div *ngIf="isLoggedIn" class="card">
+  <div class="container">
+    <p>Welcome back, my friend</p>
+    <h4><b>John Doe</b></h4>
+    <p>Architect & Engineer</p>
+  </div>
+</div>
+
+<ng-template [ngIf]="isLoggedIn">
+  <div class="container">
+    <p>Welcome back (type 2: using ng-template)</p>
+    <h4><b>John Doe</b></h4>
+    <p>Architect & Engineer</p>
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="isLoggedIn" [ngIfElse]="loggedOut">
+  Hello friend, welcome to DCAR
+</ng-template>
+<ng-template #loggedOut>
+  <div>Sorry, You are logged Out - please login again</div>
+</ng-template>
