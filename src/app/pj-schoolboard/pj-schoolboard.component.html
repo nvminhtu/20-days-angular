@@ -1,0 +1,87 @@
+<!-- In this Component we learn:
+* work with 2 way data binding
+* work with input[type="radio"]
+* use *ngIf 
+* How to improve? 
+* You can see the problem: Repeat HTML code, re-declare the variable
+* Improve to re-use the component (ex: schoolboardcard)
+-->
+<h2>School Board Management</h2>
+
+<div class="card">
+  <div class="container">
+    <input
+      type="radio"
+      [value]="0"
+      [(ngModel)]="sb"
+      name="sb"
+      [checked]="!isChecked"
+    />
+    <input
+      type="radio"
+      [value]="1"
+      [(ngModel)]="sb"
+      name="sb"
+      [checked]="isChecked"
+    />
+    <div *ngIf="sb == 1">
+      <h4><b>Breaking News</b></h4>
+      <p>
+        Lorum ipsum is the traditional Latin placeholder text, used when a
+        designer needs a chunk of text for dummying up a layout. Journo Ipsum is
+        like that, only using some of the most common catchphrases, buzzwords,
+        and bon mots of the future-of-news crowd. Hit reload for a new batch.
+        For entertainment purposes only.
+      </p>
+    </div>
+    <div *ngIf="sb == 0">
+      <h4><b>Invite Parents & Child join an outside activity</b></h4>
+      <p>
+        Lorum ipsum is the traditional Latin placeholder text, used when a
+        designer needs a chunk of text for dummying up a layout. Journo Ipsum is
+        like that, only using some of the most common catchphrases, buzzwords,
+        and bon mots of the future-of-news crowd. Hit reload for a new batch.
+        For entertainment purposes only.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="container">
+    <input
+      type="radio"
+      [value]="0"
+      [(ngModel)]="sb2"
+      name="sb2"
+      [checked]="!isChecked"
+    />
+    <input
+      type="radio"
+      [value]="1"
+      [(ngModel)]="sb2"
+      name="sb2"
+      [checked]="isChecked"
+    />
+    <div *ngIf="sb2 == 1; else parentActivity">
+      <h4><b>Breaking News</b></h4>
+      <p>
+        Lorum ipsum is the traditional Latin placeholder text, used when a
+        designer needs a chunk of text for dummying up a layout. Journo Ipsum is
+        like that, only using some of the most common catchphrases, buzzwords,
+        and bon mots of the future-of-news crowd. Hit reload for a new batch.
+        For entertainment purposes only.
+      </p>
+    </div>
+    <ng-template #parentActivity>
+      <h4><b>Invite Parents & Child join an outside activity</b></h4>
+      <p>
+        Lorum ipsum is the traditional Latin placeholder text, used when a
+        designer needs a chunk of text for dummying up a layout. Journo Ipsum is
+        like that, only using some of the most common catchphrases, buzzwords,
+        and bon mots of the future-of-news crowd. Hit reload for a new batch.
+        For entertainment purposes only.
+      </p>
+    </ng-template>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<table>
+  <thead>
+    <th>NG FOR COMPONENT</th>
+  </thead>
+  <tbody>
+    <!-- <tr *ngFor="let hero of heroes">
+      <td>{{ hero.id }}</td>
+      <td>{{ hero.name }}</td>
+    </tr> -->
+
+    <!-- 01- thieu let -->
+    <!-- <tr *ngFor="hero of heroes">
+      <td>{{ hero.id }}</td>
+      <td>{{ hero.name }}</td>
+    </tr> -->
+
+    <!-- 02-- khong xai in, xai of  -->
+
+    <!-- <tr *ngFor="let hero in heroes">
+      <td>{{ hero.id }}</td>
+      <td>{{ hero.name }}</td>
+    </tr> -->
+
+    <!-- neu thieu khai báo let cho biến i thì sẽ sai (minh can lay cai index) -->
+    <!-- <tr *ngFor="let hero of heroes; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ hero.name }}</td>
+    </tr> -->
+
+    <!-- <tr
+      *ngFor="let hero of heroes; let even = even; let odd = odd"
+      [ngClass]="{ odd: odd, even: even }"
+    >
+      <td>{{ hero.id }}</td>
+      <td>{{ hero.name }}</td>
+    </tr> -->
+
+    <!-- <tr
+      *ngFor="let hero of heroes; let first = first; let last = last"
+      [ngClass]="{ firstClass: first, lastClass: last }"
+    >
+      <td>{{ hero.name }}</td>
+    </tr> -->
+
+    <!-- <tr *ngFor="let hero of heroes; trackBy: trackHero">
+      <td>{{ hero.name }}</td>
+    </tr> -->
+    <!-- <tr>
+      <td>Superman</td>
+    </tr>
+    <tr>
+      <td>Batman</td>
+    </tr> -->
+  </tbody>
+</table>
