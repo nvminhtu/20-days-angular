@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ParentToChildComponent } from './parent-to-child.component';
+import { ProgressBarComponent } from './progress-bar.component';
 
-describe('ParentToChildComponent', () => {
-  let component: ParentToChildComponent;
-  let fixture: ComponentFixture<ParentToChildComponent>;
+describe('ProgressBarComponent', () => {
+  let component: ProgressBarComponent;
+  let fixture: ComponentFixture<ProgressBarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ParentToChildComponent ]
+      declarations: [ ProgressBarComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ParentToChildComponent);
+    fixture = TestBed.createComponent(ProgressBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

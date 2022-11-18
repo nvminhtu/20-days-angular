@@ -14,7 +14,14 @@ import { NotepadComponent } from './notepad/notepad.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { RoundBlockDirective } from './directives/round-block.directive';
 import { PjSchoolboardComponent } from './pj-schoolboard/pj-schoolboard.component';
-import { ParentToChildComponent } from './parent-to-child/parent-to-child.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { StudentsComponent } from './students/students.component';
+import { StudentComponent } from './student/student.component';
+import { CarComponent } from './car/car.component';
+import { CarDetailComponent } from './car-detail/car-detail.component';
+import { ComParentComponent } from './com-parent/com-parent.component';
+import { ComChildComponent } from './com-child/com-child.component';
+
 // use NgModule to structure features
 // 1 Angular App: split into many NgModule
 // root NgModule: AppComponent
@@ -37,7 +44,13 @@ import { ParentToChildComponent } from './parent-to-child/parent-to-child.compon
     // some custom Directive
     RoundBlockDirective,
     PjSchoolboardComponent,
-    ParentToChildComponent,
+    ProgressBarComponent,
+    StudentsComponent,
+    StudentComponent,
+    CarComponent,
+    CarDetailComponent,
+    ComParentComponent,
+    ComChildComponent,
   ],
   // tells Angular which components belong to this module
   // neu su dung  component ma ko khai báo nó - Angular sẽ trả về lỗi

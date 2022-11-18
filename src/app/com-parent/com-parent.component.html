@@ -1,0 +1,6 @@
+<p>Component: Parent</p>
+<app-com-child
+  [inputFromParent]="inputText"
+  (outputFromChild)="receiveChildData($event)"
+></app-com-child>
+<p>Child trả lời: {{ this.childMessage }}</p>
